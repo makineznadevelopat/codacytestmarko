@@ -4,7 +4,7 @@ const obj = {
   3: "3"
 };
 
-const stack = []
+const stack = [];
 
 Object.keys(obj).forEach(function (property) {
 // eslint-disable-next-line security/detect-object-injection
