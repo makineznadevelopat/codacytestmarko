@@ -1,12 +1,14 @@
 const obj = {
   test: 1,
   second: 3,
-  3: "3"
+  3: '3',
 };
 
-const stack = [];
+function test(obja) {
+  const stack = [];
+  Object.keys(obja).forEach((property) => {
+    stack.push(obja[property]);
+  });
+}
 
-Object.keys(obj).forEach(function (property) {
-// eslint-disable-next-line security/detect-object-injection
-  stack.push(obj[property]);
-});
+test(obj);
