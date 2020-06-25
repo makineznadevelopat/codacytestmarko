@@ -1,16 +1,14 @@
-let test = 'single quote test';
+const obj = {
+  test: 1,
+  second: 3,
+  3: '3'
+}
 
-let obj = {
-    "test": 1,
-    "second": 3,
-    3: "3"
-};
-
-let stack = [];
+const stack = []
 
 Object.keys(obj).forEach(function (property) {
-    let temp = obj[property];
-    stack.push(temp);
-});
+// eslint-disable-next-line security/detect-object-injection
+  stack.push(obj[property])
+})
 
-console.log(stack);
+console.log(stack)
