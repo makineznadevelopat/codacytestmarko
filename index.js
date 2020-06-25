@@ -9,7 +9,8 @@ let obj = {
 let stack = [];
 
 Object.keys(obj).forEach(function (property) {
-    stack.push(obj[property]);
+    let temp = obj[property];
+    stack.push(temp);
 });
 
 console.log(stack);
